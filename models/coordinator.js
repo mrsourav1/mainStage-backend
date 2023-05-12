@@ -1,13 +1,15 @@
 import mongoose from "mongoose";
 
 const coordinatorSchema = mongoose.Schema({
+    userid:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"user"
+    },
     location:{
-        type:String,
-        required:true
+        type:String
     },
     aadharNumber:{
-        type:String,
-        required:true
+        type:String
     },
     upiId:[],
     myTeam:[{
